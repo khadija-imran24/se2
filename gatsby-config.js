@@ -41,3 +41,44 @@ module.exports = {
     },
   ],
 }
+// module.exports = {
+//   siteMetadata: {
+//     title: "My Gatsby Site",
+//     description: "A simple site built with Gatsby",
+//     author: "Your Name", // Example metadata
+//   },
+//   plugins: [],
+// };
+
+// module.exports = {
+//   plugins: [
+//     {
+//       resolve: "gatsby-source-filesystem",
+//       options: {
+//         name: "posts",
+//         path: `${__dirname}/src/posts/`,
+//       },
+//     },
+//     "gatsby-transformer-remark",
+//   ],
+// };
+module.exports = {
+  pathPrefix: "/se",  // This corresponds to your GitHub repository name
+  siteMetadata: {
+    title: "My Gatsby Site",
+    description: "A simple site built with Gatsby",
+    author: "Khadija Imran",
+  },
+  plugins: [
+    "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: `${__dirname}/src/posts/`,
+      },
+    },
+    "gatsby-transformer-remark",
+  ],
+};
+
